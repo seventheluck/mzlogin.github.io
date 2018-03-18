@@ -1,3 +1,11 @@
+---
+layout: post
+title: Maven可用的mirrors已验证
+categories: Maven
+description: Maven可用的mirrors已验证
+keywords: Maven, mirrors
+---
+
 ```
 <mirrors>
     <mirror>
