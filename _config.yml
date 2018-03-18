@@ -99,7 +99,7 @@ gitment:
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: seventheluck
-    repo: seventheluck.github.io
+    repo: blog-comments
     clientID: 0a194897dae688c61c88
     clientSecret: a6c72320b77b90cfd0d9f9d2b2a721e19d20a5f2
 # 在使用其它评论组件时可点击显示 Disqus
