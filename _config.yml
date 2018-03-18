@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://www.seventheluck.com/
+url: https://www.seventheluck.com
 date_format: "ordinal"
 title: Seventheluck
 subtitle: "零碎的思考"
@@ -17,7 +17,7 @@ side_bar_repo_limit: 5
 # ---------------- #
 author: Seventheluck
 organization: Seventheluck
-organization_url: https://www.seventheluck.com/
+organization_url: https://www.seventheluck.com
 github_username: Seventheluck
 location: Beijing, China
 email: seventheluck@gmail.com
