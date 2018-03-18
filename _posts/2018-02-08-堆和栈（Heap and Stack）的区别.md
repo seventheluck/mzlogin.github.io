@@ -1,3 +1,10 @@
+---
+layout: post
+title: 堆和栈（Heap and Stack）的区别
+categories: Data Structure
+description: 堆和栈（Heap and Stack）的区别
+keywords: Data Structure, 堆, 栈, Heap, Stack
+---
 ## 堆和栈最明显的区别是：
 
 堆（Heap）：队列优先,先进先出（FIFO—first in first out）；
