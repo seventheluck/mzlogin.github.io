@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 堆和栈（Heap and Stack）的区别
-categories: Data Structure
+categories: DataStructure
 description: 堆和栈（Heap and Stack）的区别
 keywords: Data Structure, 堆, 栈, Heap, Stack
 ---
