@@ -1,0 +1,4 @@
+toString（）和new String()的区别！
+如果对象的toString()方法没有被重写，那么该对象会默认调用父类Object的toString()方法。Object类的toString()方法返回一个由类名（对象是该类的一个实例）、“@”和此对象Hash值的无符号十六进制表示组成，即
+
+如果是new String()方法，对象以参数形式传入！类型包括byte[]、char[]、StringBuffer、StringBuilder、String、int[]（ASCII码），将这些类型的字符数组或字符串或相似类型转化为String类型。
