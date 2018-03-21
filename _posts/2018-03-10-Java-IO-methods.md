@@ -310,3 +310,31 @@ public class CreatNewFile {
 }
 
 ```
+关于字节流和字符流的区别
+实际上字节流在操作的时候本身是不会用到缓冲区的，是文件本身的直接操作的，但是字符流在操作的 时候下后是会用到缓冲区的，是通过缓冲区来操作文件的。
+
+读者可以试着将上面的字节流和字符流的程序的最后一行关闭文件的代码注释掉，然后运行程序看看。你就会发现使用字节流的话，文件中已经存在内容，但是使用字符流的时候，文件中还是没有内容的，这个时候就要刷新缓冲区。
+
+Reader 类是 Java 的 I/O 中读字符的父类，而 InputStream 类是读字节的父类，InputStreamReader 类就是关联字节到字符的桥梁，它负责在 I/O 过程中处理读取字节到字符的转换，而具体字节到字符的解码实现它由 StreamDecoder 去实现，在 StreamDecoder 解码过程中必须由用户指定 Charset 编码格式。值得注意的是如果你没有指定 Charset，将使用本地环境中的默认字符集，例如在中文环境中将使用 GBK 编码。
+写的情况也是类似，字符的父类是 Writer，字节的父类是 OutputStream，通过 OutputStreamWriter 转换字符到字节。同样 StreamEncoder 类负责将字符编码成字节，编码格式和默认编码规则与解码是一致的。
+
+### public abstract class Reader
+extends Object
+implements Readable, Closeable
+Abstract class for reading character streams. The only methods that a subclass must implement are read(char[], int, int) and close(). Most subclasses, however, will override some of the methods defined here in order to provide higher efficiency, additional functionality, or both.
+
+### public abstract class InputStream
+extends Object
+implements Closeable
+This abstract class is the superclass of all classes representing an input stream of bytes.
+Applications that need to define a subclass of InputStream must always provide a method that returns the next byte of input.
+
+### public class InputStreamReader
+extends Reader
+An InputStreamReader is a bridge from byte streams to character streams: It reads bytes and decodes them into characters using a specified charset. The charset that it uses may be specified by name or may be given explicitly, or the platform's default charset may be accepted.
+Each invocation of one of an InputStreamReader's read() methods may cause one or more bytes to be read from the underlying byte-input stream. To enable the efficient conversion of bytes to characters, more bytes may be read ahead from the underlying stream than are necessary to satisfy the current read operation.
+
+For top efficiency, consider wrapping an InputStreamReader within a BufferedReader. For example:
+
+ BufferedReader in
+   = new BufferedReader(new InputStreamReader(System.in));
