@@ -12,7 +12,7 @@ Open Find Get Own
 
 Hello every buddy. :+1:
 
-{% highlight python %}
+
 I have been working in Bank of China Software Center since graduation from university in July 2012. 
 At first, I was arranged to provide prompt and efficient services on financial products purchasing in online banking for clients, 
 which covered fields in demand analysis, project design and product development. Soon, out of the excellent performance of my work, 
@@ -25,7 +25,7 @@ Southern Airlines, Sinopec Group and Volvo Cars were handed over to our team.
 I joined in Goinvest Fund as a partner in August 2017. 
 I was mainly responsible for the demand analysis, project design, and development of financial instruments and products. 
 I mainly use Python, Java, and MySQL at work.
-{% endhighlight %}
+
 
 ## 联系
 
