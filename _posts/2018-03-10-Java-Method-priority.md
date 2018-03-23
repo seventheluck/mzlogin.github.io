@@ -1,3 +1,11 @@
+---
+layout: post
+title: Java继承过程中方法调用的顺序
+categories: Java
+description: Java继承过程中方法调用的顺序
+keywords: 多态, 继承, Java
+---
+
 ## 问题
 ### 程序代码
 请阅读如下代码，并给出输出！
