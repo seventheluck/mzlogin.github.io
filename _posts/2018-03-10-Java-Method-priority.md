@@ -62,25 +62,43 @@ public class ExtendClass {
 
 ## 解决步骤：
 ### 1、编译阶段：
-程序首先保证的是编译不能出错，所以，方法调用以引用类型为准，引用调用方法的优先级：this.show(object) > super.show(object) > this.show(super(object)) > 
+程序首先保证的是编译不能出错，所以，方法调用以引用类型为准，引用调用方法的优先级：this.show(object) > super.show(object) > this.show(super(object)) 
+
 		 * a1.show(b) --> A.show(A)
+
 		 * a1.show(c) --> A.show(A)
+
 		 * a1.show(d) --> A.show(D)
+		 
 		 * a2.show(b) --> A.show(A)
+		 
 		 * a2.show(c) --> A.show(A)
+		 
 		 * a2.show(d) --> A.show(D)
+		 
 		 * b.show(b) --> B.show(B)
+		 
 		 * b.show(c) --> B.show(B)
+		 
 		 * b.show(d) --> B.show(D)
      
 ### 2、运行阶段：
 运行阶段的调用规则是，变量和静态方法优先按引用类型来调用，其余方法优先按实例类型来调用！
+
 		 * a1.show(b) --> A.show(A) --> 引用类型：A，实例类型：A --方法优先按实例类型A--> A and A
+		 
 		 * a1.show(c) --> A.show(A) --> 引用类型：A，实例类型：A --方法优先按实例类型A--> A and A
+		 
 		 * a1.show(d) --> A.show(D) --> 引用类型：A，实例类型：A --方法优先按实例类型A--> A and D
+		 
 		 * a2.show(b) --> A.show(A) --> 引用类型：A，实例类型：B --方法优先按实例类型B--> B and A
+		 
 		 * a2.show(c) --> A.show(A) --> 引用类型：A，实例类型：B --方法优先按实例类型B--> B and A
+		 
 		 * a2.show(d) --> A.show(D) --> 引用类型：A，实例类型：B --方法优先按实例类型B，B调用继承的父类A的方法--> A and D
+		 
 		 * b.show(b) --> B.show(B) --> 引用类型：B，实例类型：B --方法优先按实例类型B--> B and B
+		 
 		 * b.show(c) --> B.show(B) --> 引用类型：B，实例类型：B --方法优先按实例类型B--> B and B
+		 
 		 * b.show(d) --> B.show(D) --> 引用类型：B，实例类型：B --方法优先按实例类型B，B调用继承的父类A的方法--> A and D
