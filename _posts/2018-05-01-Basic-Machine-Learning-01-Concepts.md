@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic Machine Learning 01 - Concepts
-categories: Machine Learning
+categories: Machine-Learning
 description: Machine Learning
 keywords: Machine Learning, ML, DL
 ---
