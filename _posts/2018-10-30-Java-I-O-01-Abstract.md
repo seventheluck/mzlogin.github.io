@@ -1,20 +1,20 @@
-﻿# Java I/O - 01 Abstract
+# Java I/O - 01 Abstract
 
 标签（空格分隔）： Java
 
 ---
 
 ###Summary:
-Direction: **Input stream** & **Output stream**.
-Type of data: **Byte Stream Classes** & **Character Stream Classes**.
-####1. Byte Stream Classes 
-Read bytes from an input stream and write bytes to an output stream.
+Direction: **Input stream** & **Output stream**.
+Type of data: **Byte Stream Classes** & **Character Stream Classes**.
+####1. Byte Stream Classes
+Read bytes from an input stream and write bytes to an output stream.
 #####A. InputStream 
 ![此处输入图片的描述][1]
 InputStream class is a base class of all the classes that are used to read bytes from a file, memory or console. InputStream is an abstract class and hence we can't create its object but we can use its subclasses for reading bytes from the input stream. 
 #####B. OutputStream
 ![此处输入图片的描述][2]
-OutputStream class is a base class of all the classes that are used to write bytes to a file, memory or console. OutputStream is an abstract class and hence we can't create its object but we can use its subclasses for writing bytes to the output stream. In the diagram below we have shown the hierarchy of OutputStream class and some of its important subclasses that are used to write bytes. 
+OutputStream class is a base class of all the classes that are used to write bytes to a file, memory or console. OutputStream is an abstract class and hence we can't create its object but we can use its subclasses for writing bytes to the output stream. In the diagram below we have shown the hierarchy of OutputStream class and some of its important subclasses that are used to write bytes.
 ####2. Character Stream Classes
 Used to read characters from the source and write characters to destination.
 two kinds of Character Stream classes - Reader classes and Writer classes. 
