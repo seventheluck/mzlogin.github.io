@@ -23,35 +23,25 @@ create an input stream, used to read byte/bytes from a file.
 ```
 #### 2. Code examples
 ```java
-    public static void main(String... ar) throws IOException {
-        try {
-            FileInputStream fin = new FileInputStream("D:\\TextBook.txt");
-            int c;
-            while ((c = fin.read()) != -1)//Readingonebyteoutofafile
-            {
-                System.out.print((char) c);//castingbytetocharfordisplayingonthescreenusing,System.out
-            }
-            fin.close();
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-    }
-```
+package filesAndIo.byteStreams;
 
-Reading a whole byte array out of a file using read(byte[] b) method.
+import java.io.*;
 
-```java
-    public static void main(String... ar) throws IOException {
-        try {
-            FileInputStream fin = new FileInputStream("D:\\TextBook.txt");
-            int c;
-            while ((c = fin.read()) != -1)//Readingonebyteoutofafile
-            {
-                System.out.print((char) c);//castingbytetocharfordisplayingonthescreenusing,System.out
-            }
-            fin.close();
-        } catch (IOException e) {
-            System.out.println(e);
-        }
+public class BytesInputStream {
+
+    public static void main(String[] args) throws IOException {
+        File file = new File("/Users/petter/test/test.txt");
+        FileInputStream fileInputStream = new FileInputStream(file);
+        FileInputStream fileInputStream1 = new FileInputStream("/Users/petter/test/test.txt");
+        int available = fileInputStream1.available();
+        System.out.println(available);
+        byte[] result = new byte[available];
+        fileInputStream1.read(result);
+        fileInputStream1.close();
+        String str = new String(result);
+        System.out.println("======================");
+        System.out.println(str);
     }
+}
+
 ```
