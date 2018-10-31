@@ -5,7 +5,8 @@ categories: Java
 description: Java I/O - 03 FileOutputStream
 keywords: Java, I/O
 ---
-
+FileOutputStream:
+byte array --> FileOutputStream --> file
 #### 1. Constructor
 ##### A. FileOutputStream(File file)
 ```java
