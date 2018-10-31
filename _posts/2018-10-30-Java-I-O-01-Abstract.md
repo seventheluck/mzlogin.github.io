@@ -10,27 +10,27 @@ keywords: Java, I/O
 
 ---
 
-###Summary:
-Direction: **Input stream** & **Output stream**.
-Type of data: **Byte Stream Classes** & **Character Stream Classes**.
-####1. Byte Stream Classes 
-Read bytes from an input stream and write bytes to an output stream.
-#####A. InputStream 
+### Summary:
+Direction: **Input stream** & **Output stream**.
+Type of data: **Byte Stream Classes** & **Character Stream Classes**.
+#### 1. Byte Stream Classes 
+Read bytes from an input stream and write bytes to an output stream.
+##### A. InputStream 
 ![此处输入图片的描述][1]
 InputStream class is a base class of all the classes that are used to read bytes from a file, memory or console. InputStream is an abstract class and hence we can't create its object but we can use its subclasses for reading bytes from the input stream. 
-#####B. OutputStream
+##### B. OutputStream
 ![此处输入图片的描述][2]
-OutputStream class is a base class of all the classes that are used to write bytes to a file, memory or console. OutputStream is an abstract class and hence we can't create its object but we can use its subclasses for writing bytes to the output stream. In the diagram below we have shown the hierarchy of OutputStream class and some of its important subclasses that are used to write bytes. 
-####2. Character Stream Classes
+OutputStream class is a base class of all the classes that are used to write bytes to a file, memory or console. OutputStream is an abstract class and hence we can't create its object but we can use its subclasses for writing bytes to the output stream. In the diagram below we have shown the hierarchy of OutputStream class and some of its important subclasses that are used to write bytes.
+#### 2. Character Stream Classes
 Used to read characters from the source and write characters to destination.
-two kinds of Character Stream classes - Reader classes and Writer classes. 
-#####A. Reader
+two kinds of Character Stream classes - Reader classes and Writer classes.
+##### A. Reader
 ![此处输入图片的描述][3]
-Reader class and its subclasses are used to read characters from source. 
-Reader class is a base class of all the classes that are used to read characters from a file, memory or console. Reader is an abstract class and hence we can't instantiate it but we can use its subclasses for reading characters from the input stream. We will discuss subclasses of Reader class with their code, in the next few articles. 
-#####B. Writer
+Reader class and its subclasses are used to read characters from source.
+Reader class is a base class of all the classes that are used to read characters from a file, memory or console. Reader is an abstract class and hence we can't instantiate it but we can use its subclasses for reading characters from the input stream. We will discuss subclasses of Reader class with their code, in the next few articles.
+##### B. Writer
 ![此处输入图片的描述][4]
-	Writer class and its subclasses are used to write characters to a file, memory or console. Writer is an abstract class and hence we can't create its object but we can use its subclasses for writing characters to the output stream. We will discuss subclasses of Writer with their code in the next few articles. 
+	Writer class and its subclasses are used to write characters to a file, memory or console. Writer is an abstract class and hence we can't create its object but we can use its subclasses for writing characters to the output stream. We will discuss subclasses of Writer with their code in the next few articles.
 	
 
 
