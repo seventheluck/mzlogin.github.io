@@ -8,8 +8,6 @@ description: Java I/O
 keywords: Java, I/O
 ---
 
----
-
 ### Summary:
 Direction: **Input stream** & **Output stream**.
 Type of data: **Byte Stream Classes** & **Character Stream Classes**.
