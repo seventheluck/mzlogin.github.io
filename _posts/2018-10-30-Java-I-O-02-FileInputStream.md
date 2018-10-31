@@ -17,7 +17,7 @@ create an input stream, used to read byte/bytes from a file.
 ```
  
 
-#### B. FileInputStream(String path)
+##### B. FileInputStream(String path)
 ```java
     FileInputStream fis= new FileInputStream("D:\\TextBook.txt");
 ```
