@@ -1,11 +1,9 @@
-﻿# Java I/O - 01 Abstract
-
----
+﻿---
 layout: post
-title: Java修饰符对应的访问权限总结
+title: Java I/O - 01 Abstract
 categories: Java
-description: Java修饰符对应的访问权限总结
-keywords: 访问权限, 修饰符, Java
+description: Java I/O - 01 Abstract
+keywords: Java, I/O
 ---
 
 ### Summary:
