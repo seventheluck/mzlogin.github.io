@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Java I/O - 02 FileInputStream
 categories: Java
@@ -8,21 +8,20 @@ keywords: Java, I/O
 
 FileInputStream class: subclass of InputStream abstract class. 
 create an input stream, used to read byte/bytes from a file. 
+#### 1. Constructors :
 
-1. Constructors :
-
-A. FileInputStream(File file)
+##### A. FileInputStream(File file)
 ```java
     File file= new File("D:\\Textbook.txt");
     FileInputStream fis= new FileInputStream(file);
 ```
  
 
-B. FileInputStream(String path)
+#### B. FileInputStream(String path)
 ```java
     FileInputStream fis= new FileInputStream("D:\\TextBook.txt");
 ```
-
+#### 2. Code examples
 ```java
     public static void main(String... ar) throws IOException {
         try {
