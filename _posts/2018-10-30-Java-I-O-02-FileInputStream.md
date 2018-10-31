@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Java I/O - 02 FileInputStream
 categories: Java
