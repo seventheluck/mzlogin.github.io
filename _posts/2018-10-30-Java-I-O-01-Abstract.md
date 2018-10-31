@@ -13,7 +13,7 @@ keywords: Java, I/O
 ### Summary:
 Direction: **Input stream** & **Output stream**.
 Type of data: **Byte Stream Classes** & **Character Stream Classes**.
-#### 1. Byte Stream Classes 
+#### 1. Byte Stream Classes
 Read bytes from an input stream and write bytes to an output stream.
 ##### A. InputStream 
 ![此处输入图片的描述][1]
