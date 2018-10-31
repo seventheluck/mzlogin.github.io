@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Algorithms Tree 01
+title: Algorithms Tree 02
 categories: Algorithms
-description: Algorithms Tree 01
+description: Algorithms Tree 02
 keywords: Algorithms, Tree
 ---
 
