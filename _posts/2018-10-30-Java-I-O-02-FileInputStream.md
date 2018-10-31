@@ -1,9 +1,10 @@
-﻿layout: post
+﻿---
+layout: post
 title: Java I/O - 02 FileInputStream
 categories: Java
 description: Java I/O - 02 FileInputStream
 keywords: Java, I/O
-
+---
 
 FileInputStream class: subclass of InputStream abstract class. 
 create an input stream, used to read byte/bytes from a file. 
