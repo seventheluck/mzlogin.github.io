@@ -6,6 +6,7 @@ description: Java I/O - 05 ByteArrayOutputStream
 keywords: Java, I/O
 ---
 This method will reads bytes from byte array and writes the content to its own internal buffer. Then ByteArrayOutputStream writes its content of internal buffer to file.
+byte array --> ByteArrayOutputStream --> file
 #### 1. Constructor
 
 ```java
