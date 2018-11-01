@@ -64,3 +64,77 @@ class Solution {
     }
 }
 ```
+
+#### [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/description/)
+```java
+/*
+
+Solution 1
+Time complexity: O(n);
+Space complexity: O(n);
+2018-11-01 00:50:27 update
+
+*/
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        levelOrder(root, result, 0);
+        return result;
+    }
+
+    public void levelOrder(TreeNode node, List<List<Integer>> result, int depth) {
+        if (node == null)
+            return;
+        List<Integer> currentList = null;
+        if (depth < result.size()) {
+            currentList = result.get(depth);
+        } else {
+            currentList = new ArrayList<Integer>();
+            result.add(currentList);
+        }
+        currentList.add(node.val);
+        levelOrder(node.left, result, depth + 1);
+        levelOrder(node.right, result, depth + 1);
+    }
+}
+
+
+/*
+
+Solution 2
+Time complexity: O(n);
+Space complexity: O(n);
+2018-11-01 01:15:02 update
+*/
+
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+
+        List<TreeNode> list = new ArrayList<TreeNode>();
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        if (root == null)
+            return result;
+        list.add(root);
+        list.add(null);
+        List<Integer> currentList = new ArrayList<Integer>();
+        result.add(currentList);
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == null) {
+                currentList = new ArrayList<Integer>();
+                if (i != list.size() - 1) {
+                    list.add(null);
+                    result.add(currentList);
+                }
+            } else {
+                currentList.add(list.get(i).val);
+                if (list.get(i).left != null)
+                    list.add(list.get(i).left);
+                if (list.get(i).right != null)
+                    list.add(list.get(i).right);
+            }
+
+        }
+        return result;
+    }
+}
+```
