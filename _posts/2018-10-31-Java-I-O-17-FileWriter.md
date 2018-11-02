@@ -8,7 +8,7 @@ keywords: Java, I/O
 
 #### 1. Constructor
 ```java
-File file = new File("/Users/petter/test/testCharacterArrayWriter.txt");
+File file = new File("/Users/petter/test/testFileWriter.txt");
 FileReader fr = new FileReader(file);
 ```
 
@@ -18,22 +18,19 @@ FileReader fr = new FileReader(file);
 package filesAndIo.characterStreams;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileReaderClasses {
+public class FileWriterClasses {
 
     public static void main(String[] args) {
-        File file = new File("/Users/petter/test/testCharacterArrayWriter.txt");
+        File file = new File("/Users/petter/test/testFileWriter.txt");
         try {
-            FileReader fr = new FileReader(file);
-            int c = fr.read();
-            while (c != -1) {
-                System.out.print((char) c);
-                c = fr.read();
-            }
-            fr.close();
+            FileWriter fw = new FileWriter(file);
+            String str = "This is a test for FileWriter!";
+            fw.write(str);
+            fw.flush();
+            fw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
