@@ -111,3 +111,82 @@ class Solution {
     }
 }
 ```
+
+#### [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/)
+
+```java
+/*
+
+Time complexity: O(n);
+Space complexity: O(1);
+2018-11-01 20:54:35
+
+*/
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        if(head == null)
+            return head;
+        ListNode dump = new ListNode(0);
+        dump.next = head;
+        ListNode p = head;
+        ListNode r = head.next;
+        
+        while(true){
+            if(r == null)
+                break;
+            if(p.val == r.val){
+                p.next = r.next;
+                r = r.next;
+            }else{
+                p = p.next;
+                r = r.next;
+            }
+        }
+        return dump.next;
+    }
+}
+```
+
+
+#### [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/)
+
+```java
+/*
+Time complexity: O(n);
+Space complexity: O(1);
+2018-11-01 20:40:53
+
+*/
+
+class Solution{
+    public ListNode deleteDuplicates(ListNode head){
+        if(head == null)
+            return head;
+        ListNode dump = new ListNode(0);
+        ListNode p = dump;
+        ListNode r = head;
+        dump.next = head;
+        
+        while(true){
+            if(r == null)
+                break;
+            while(true){
+                if(r.next!=null&&r.val==r.next.val){
+                    r = r.next;
+                }else{
+                    break;
+                }
+            }
+            
+            if(p.next == r){
+                r = r.next;
+                p = p.next;
+            }else{
+                p.next = r.next;
+                r = r.next;
+            }
+        }
+        return dump.next;
+    }
+}
+```
