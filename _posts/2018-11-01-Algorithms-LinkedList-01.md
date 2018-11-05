@@ -190,3 +190,46 @@ class Solution{
     }
 }
 ```
+
+#### [Partition List](https://leetcode.com/problems/partition-list/description/)
+
+```java
+/*
+
+Time complexity: O(n);
+Space complexity: O(1);
+2018-11-01 21:05:45
+
+*/
+class Solution {
+    public ListNode partition(ListNode head, int x) {
+        if(head == null)
+            return head;
+        
+        ListNode dump1 = new ListNode(0);
+        ListNode cur1 = dump1;
+        ListNode dump2 = new ListNode(0);
+        ListNode cur2 = dump2;
+        
+        ListNode p = head;
+        
+        while(true){
+            if(p == null)
+                break;
+            if(p.val < x){
+                cur1.next = p;
+                cur1 = p;
+            }else{
+                cur2.next = p;
+                cur2 = p;
+            }
+            p = p.next;
+            cur1.next = null;
+            cur2.next = null;
+        }
+        
+        cur1.next = dump2.next;
+        return dump1.next;
+    }
+}
+```
