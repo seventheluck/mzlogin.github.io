@@ -356,6 +356,6 @@ The load factor used when none specified in constructor.
         this.threshold = tableSizeFor(initialCapacity);
     }    
 ```
-
+![map](/images/my_posts/java_collection_map/map1.jpg)
 Cite: 
 JDK 8.
