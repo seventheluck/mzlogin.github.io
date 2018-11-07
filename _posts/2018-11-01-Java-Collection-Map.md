@@ -6,9 +6,9 @@ description: Java Map 01
 keywords: Java, Map
 ---
 
-### Map
+#### Map
 
-#### Overview
+##### Map Overview
 
 ```java
 public interface Map<K,V> {
@@ -309,3 +309,53 @@ public interface Map<K,V> {
 ```
 
 #### HashMap
+
+##### HashMap Overview
+HashMap is an implementation of Map interface.
+
+###### Initial capacity
+The default initial capacity is 16(1 << 4) - MUST be a power of two.
+```java
+    static final int DEFAULT_INITIAL_CAPACITY = 1 << 4;
+```
+###### Maximum capacity
+The maximum capacity, used if a higher value is implicitly specified by either of the constructors with arguments. MUST be a power of two <= 1<<30.
+```java
+    static final int MAXIMUM_CAPACITY = 1 << 30;
+```
+###### Load factor
+The load factor used when none specified in constructor.
+```java
+
+    static final float DEFAULT_LOAD_FACTOR = 0.75f;
+```
+###### Treeify threshold
+```java
+    static final int TREEIFY_THRESHOLD = 8;
+```
+##### Constructor method
+```java
+    public HashMap() {
+        this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted
+    }
+
+    public HashMap(int initialCapacity) {
+        this(initialCapacity, DEFAULT_LOAD_FACTOR);
+    }
+
+    public HashMap(int initialCapacity, float loadFactor) {
+        if (initialCapacity < 0)
+            throw new IllegalArgumentException("Illegal initial capacity: " +
+                                               initialCapacity);
+        if (initialCapacity > MAXIMUM_CAPACITY)
+            initialCapacity = MAXIMUM_CAPACITY;
+        if (loadFactor <= 0 || Float.isNaN(loadFactor))
+            throw new IllegalArgumentException("Illegal load factor: " +
+                                               loadFactor);
+        this.loadFactor = loadFactor;
+        this.threshold = tableSizeFor(initialCapacity);
+    }    
+```
+
+Cite: 
+JDK 8.
