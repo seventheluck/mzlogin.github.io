@@ -358,7 +358,7 @@ The load factor used when none specified in constructor.
 ```
 ![map1](/images/my_posts/java_collection_map/map1.jpg)
 ![map2](/images/my_posts/java_collection_map/map2.jpg)
-![map3](/images/my_posts/java_collection_map/map3.jpg)
 ![map4](/images/my_posts/java_collection_map/map4.jpg)
+![map3](/images/my_posts/java_collection_map/map3.jpg)
 Cite: 
 JDK 8.
